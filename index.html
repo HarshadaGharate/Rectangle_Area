@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rectangle Area</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .calc{
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            width: 30%;
+        }
+        .inp{
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <div>
-            <input type="number" id="num1">
-            <input type="number" id="num2">
+    <div class="container">
+        <div class="calc">
+            <h1>Area of Rectangle</h1>
+            <input type="number" id="num1" class="inp">
+            <br>
+            <input type="number" id="num2" class="inp">
+            <br>
             <button>Calculate</button>
         </div>
     </div>
