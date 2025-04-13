@@ -45,6 +45,7 @@
 
         .btn-rst{
             padding: 3px 29px;
+            margin-bottom: 8px;
         }
 
         .btn-calc{
@@ -78,8 +79,17 @@
             const length = document.getElementById("num1");
             const breadth = document.getElementById("num2");
             const res = document.getElementById("result");
-
-            const total = parseInt(length.value)*parseInt(breadth.value);
+            const input1 = length.value;
+            if(input1==""){
+                alert("Please enter 1st number");
+                return;
+            }
+            const input2 = breadth.value;
+            if(input2==""){
+                alert("Please enter 2nd number");
+                return;
+            }
+            const total = parseInt(input1)*parseInt(input2);
             res.innerText=`Area:${total}`
         }
 
