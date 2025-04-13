@@ -18,6 +18,7 @@
             background-color: antiquewhite;
             width: 300px;
             padding: 10px 20px;
+            align-items: center;
         }
 
         h1{
@@ -50,6 +51,10 @@
             padding: 3px 15px;
 
         }
+        .res-text{
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -59,13 +64,26 @@
             <input type="number" id="num1" class="inp">
             <br>
             <input type="number" id="num2" class="inp">
-            <br>
+            <p class="res-text" id="result">---</p>
             <div>
-            <button class="btn btn-calc">Calculate</button>
+            <button class="btn btn-calc" onclick="area()" id="calc">Calculate</button>
             <br>
-            <button class="btn btn-rst">Reset</button>
+            <button class="btn btn-rst" onclick="reset()">Reset</button>
             </div>
         </div>
     </div>
+
+    <script>
+        function area(){
+            const length = document.getElementById("num1");
+            const breadth = document.getElementById("num2");
+            const res = document.getElementById("result");
+
+            const total = parseInt(length.value)*parseInt(breadth.value);
+            res.innerText=`Area:${total}`
+        }
+    </script>
+
+
 </body>
 </html>
