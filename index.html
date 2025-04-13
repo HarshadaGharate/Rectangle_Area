@@ -82,6 +82,16 @@
             const total = parseInt(length.value)*parseInt(breadth.value);
             res.innerText=`Area:${total}`
         }
+
+        function reset(){
+            const length=document.getElementById("num1");
+            const breadth=document.getElementById("num2");
+            const res=document.getElementById("result");
+
+            length.value=""
+            breadth.value=""
+            res.innerText="---"
+        }
     </script>
 
 
